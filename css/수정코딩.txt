@@ -1,0 +1,128 @@
+다른 사람이 말하는 나
+
+>.talk{
+    background-image: url(./../images/aboutme/bg_talk_paint.jpg);
+    background-position: 0 -150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    >h3{
+      padding: 70px 0;
+      color: $sec-color-2;
+      font-weight: 500;
+      font-size: $subTitle;
+      text-align: center;
+    } //end of h3
+
+    >ul{
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 50px;
+
+      @media #{$mobile}{
+        display: block;
+        width: 95%;
+        margin: 0 auto;
+      }
+
+      >li{
+        position: relative;
+        width: 30%;
+        min-width: 155px;
+        min-height: 400px;
+        padding: 0 2%;
+        background-color: $pri-color-3;
+        border: 1px solid darken($pri-color-2,20%);
+        border-radius: 16px;
+        box-sizing: border-box;
+
+        @media #{$mobile}{
+          width: 100%;
+          min-height: 450px;
+          margin-bottom: 20px;
+          padding: 0 10%;
+          box-shadow: 0 0 10px rgba(14,14,14,0.5);;
+
+          &:last-child{margin-bottom: 0;}
+        }
+
+        >h4{
+          position: absolute;
+          left: 50%;
+          top: 140px;
+          margin-left: 30px;
+          padding: 5px 10px 5px 30px;
+          color: $pri-color-3;
+          font-weight: 400;
+          letter-spacing: 3px;
+          background-color: $pri-color-2;
+          border-radius: 0 5px 5px 0;
+
+          @media #{$mobile}{
+            top: initial;
+            bottom: 15px;
+            margin-left: -30px;
+            padding: 5px 10px;
+            letter-spacing: 5px;
+            text-indent: 5px;
+            border-radius: 5px;
+          }
+          
+          &:after{
+            display: block;
+            position: absolute;
+            left: -105px;
+            top: -115px;
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            border-radius: 50%;
+
+            @media #{$mobile}{
+              top: -370px;
+              left: -50px;
+            }
+
+            content: '';
+          }
+        } //end of h4
+
+        &:nth-child(1)>h4:after{
+          background-image: url(./../images/aboutme/friend-jh.png);
+          background-position: 0 -125px;
+          background-size: 105%;
+          background-repeat: no-repeat;
+        }
+
+        &:nth-child(2)>h4:after{
+          background-image: url(./../images/aboutme/friend-sk.jpg);
+          background-position: -80px 195px;
+          background-size: 200%;
+        }
+
+        &:nth-child(3)>h4:after{
+          background-image: url(./../images/aboutme/friend-ea.png);
+          background-position: -15px -120px;
+          background-size: 120%;
+          background-repeat: no-repeat;
+        }
+
+        >strong{
+          display: block;
+          margin: 190px 0 30px;
+          font-size: $txtMedium;
+          text-align: center;
+
+          @media #{$mobile}{
+            margin-top: 210px;
+          }
+        } //end of strong
+
+        >p{
+          line-height: 1.8;
+          text-align: center;
+        }
+      } //end of li
+    } //end of ul  
+  } //end of .talk
+} //end of #aboutme
